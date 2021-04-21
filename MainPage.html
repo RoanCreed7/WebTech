@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="MainStylesheet.css" rel="stylesheet">
+    
+
+    <title>Infiltration</title>
+</head>
+<body>
+
+    <div>
+        <audio id="audio" loop="true">
+            <source src="Music/Griphop.mp3" type="audio/mp3">
+        </audio>
+        <img alt="" src="Images/volume-mute-solid.svg" 
+        id="audioMUMBtn" onclick="playMusic()" ></img>
+    </div>
+
+
+    <div class="menu">
+        <div class="burger"></div>
+    </div>
+
+
+    <div class="select">
+        <div class="menuSelect">
+            <div class="col">
+                <b>
+                    <div class="selectHome"><a href="MainPage.html">Home</a></div>
+                    <div class="selectAbout"><a href="AboutPage.html">About</a></div>
+                    <div class="selectSettings"><a href="SettingsPage.html">Settings</a></div>
+                    <div class="selectInstructions"><a href="Instructions.html">Instructions</a></div>
+                </b>
+            </div>  
+        </div>
+    </div>
+
+
+
+    <div id="title" class="title">
+        <u><b>Infiltration Adventure Game</b></u>
+    </div>
+
+    <div class="container">
+        <div id = "story" class="content">
+            <b>MISSION BRIEF: <br>
+
+                You are an agent of a small government body with the mission 
+                of setting yourself up to be a spy inside an opposing 
+                powerful nation. This nation has personal data and 
+                surveillance on every person in the known world, including
+                you. The only way to safely live there is by deleting your 
+                data file from their master server hidden in the mountains.
+                You must infiltrate your way through by hacking their defence
+                systems. Good luck.</b>
+        
+        </div>
+
+        
+
+        <div id = "continue-button" class="buttons">
+
+            <audio id="typewriter">
+                <source src="Music/typewriter.mp3" type="audio/mp3">
+            </audio>
+            
+
+            <button class="btn" onclick="playType(),gameStart()">Accept Mission</button>
+        </div>
+
+        
+        <div class="gameArea" hidden>
+            <div  class='score'>Time remaining:
+                <a id = "score" class='score-1'></a>
+            </div><br>
+            <div class="start">
+
+            </div>
+            <input type="text" focus class="hidden" style="text-transform: capitalize;"></input>
+            <button type="text" class="but" onclick="choice()" >Start Game</button>
+            
+        </div>
+    
+
+    </div>
+    
+    <script src="mainPageJavaScript.js"></script>
+    <script src="gameJavaScript.js"></script>
+</body>
+</html>

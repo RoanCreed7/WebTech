@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="MainStylesheet.css" rel="stylesheet">
+
+        <title>Stats Page</title>
+    </head>
+    <body>
+
+        <div>
+            <audio id="audio" loop="true">
+                <source src="Music/Griphop.mp3" type="audio/mp3">
+            </audio>
+            <img alt="" src="Images/volume-mute-solid.svg" 
+            id="audioMUMBtn" onclick="playMusic()" ></img>
+        </div>
+
+        <div class="menu">
+            <div class="burger"></div>
+        </div>
+    
+        <div class="select">
+            <div class="menuSelect">
+                <div class="col">
+                    <b>
+                        <div class="selectHome"><a href="MainPage.html">Home</a></div>
+                        <div class="selectAbout"><a href="AboutPage.html">About</a></div>
+                        <div class="selectSettings"><a href="SettingsPage.html">Settings</a></div>
+                        <div class="selectInstructions"><a href="Instructions.html">Instructions</a></div>
+                    </b>
+                </div>  
+            </div>
+        </div>
+
+        <div id="title" class="title">
+            <u><b>Statistics</b></u>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <b>
+                    <div class="row">
+                        <div class="column">
+                            Total Time Played: <p id="totalTimePlayed">00:00:00</p>
+                            Fastest Time: <p id="fastestTime">00:00:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="column">Completion:<br><br>
+                            Easy <text id="easyCompletion">&#10004;</p>
+                            Medium <text id="mediumCompletion">&#10004;</p>
+                            Hard <text id="hardCompletion">&#10006;</p>
+                        </div>
+                    </div>
+                   
+
+                </b>
+
+                <div id = "reset-button">
+                    <audio id="typewriter" src="Music/typewriter.mp3"></audio>
+                    <button id = "reset-btn" class="btn" onclick="playType()">Reset Stats</button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        
+        <script src="mainPageJavaScript.js"></script>
+        
+    </body>
+</html>

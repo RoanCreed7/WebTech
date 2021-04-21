@@ -1,0 +1,366 @@
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(175, 175, 174, 0.877);
+    background-image: url("Images/camo.png");
+
+  }
+  
+  
+
+  .title {
+    max-width: 80%;
+    position: absolute;
+    top: 110px;
+    font-family: 'Courier New';
+    font-size: 34px;
+  }
+
+  .container {
+    width: 700px;
+    max-width: 80%;
+    max-height: 60%;
+    background-image: url("Images/oldPaper.jpg");
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px;
+    overflow: auto;
+    font-size: 20px;
+    font-family: 'Courier New';
+    
+    position: relative;
+  }
+
+  .instruction-container{
+    width: 1200px;
+    height: 1500px;
+    max-width: 90%;
+    max-height: 60%;
+    background-image: url("Images/oldPaper.jpg");
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px;
+    font-size: 18px;
+    font-family: 'Courier New';
+    position: absolute;
+  }
+
+  .btn{
+    background-color: rgb(30, 129, 176);
+    border: 2px solid hsl(0, 0%, 0%);
+    border-radius: 10px;
+    padding: 5px 10px;
+    
+    margin: auto;
+    margin-top: 15px;
+    margin-right: 25px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    
+    font-size: 22px;
+    font-family: 'Courier New';
+    font-weight: bolder;
+    position: relative;
+    position: center;
+  }
+
+  #reset{
+    position: absolute;
+    top: 80%;
+
+  }
+
+  .btn:hover{
+      border-color: rgb(255, 255, 255);
+      cursor: pointer;
+  }
+  
+
+  input[type=checkbox] {
+    transform: scale(1.5);
+  }
+
+  .selectionBox {
+    font-size: 18px;
+    background-color:rgb(43, 161, 92);
+    font-family: 'Courier New';
+    font-weight: bolder;
+}
+
+.column{
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.content{
+  font-weight: bolder;
+}
+
+
+
+
+/*Game Parts*/
+input{
+  font-family: 'Courier New';
+  height: 30px;
+  font-weight: bolder;
+  font-size: 25px;
+
+}
+
+.failbox {
+  font-family: 'Courier New';
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.buttons{
+  text-align: center;
+}
+
+#reset-btn{
+  right: 100px;
+}
+
+.gameArea{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.start{
+  font-size: 22px;
+}
+
+.but{
+  background-color: rgb(30, 129, 176);
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 10px;
+  padding: 5px 10px;
+  
+  margin: auto;
+  margin-top: 15px;
+  margin-right: 25px;
+  color: rgb(0, 0, 0);
+  outline: none;
+  
+  font-size: 20px;
+  font-family: 'Courier New';
+  font-weight: bolder;
+  position: relative;
+  position: center;
+}
+
+.but:hover{
+  border-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/*Burger Menu*/
+.menu {
+position: fixed;
+top: 40px;
+right: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50px;
+height: 50px;
+cursor: pointer;
+transition: all .4s ease-in-out;
+}
+
+.burger {
+  width: 35px;
+  height: 4px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all .3s ease-in-out;
+}
+
+.burger::after,.burger::before{
+  content: "";
+  position:absolute;
+  width: 35px;
+  height: 4px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all .4s ease-in-out;
+}
+
+.burger::before{
+  transform: translateY(-10px);
+}
+
+.burger::after{
+  transform: translateY(10px);
+}
+
+.menu.open .burger{
+  transform: shrink(0);
+  background: transparent;
+
+}
+
+.menu.open .burger::before{
+  transform: rotate(45deg);
+
+}
+
+.menu.open .burger::after{
+  transform: rotate(-45deg);
+}
+
+/*Menu Selection*/
+
+
+.menuSelect {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  width: 220px;
+  max-width: 300px;
+  max-height: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+
+  display:flex;
+
+  font-family: 'Courier New';
+  background-color: rgba(112, 112, 112, 0.7);
+  border: 3px solid rgb(0, 0, 0);
+  box-shadow: 0 0 1px 1px;
+  visibility: hidden;
+}
+
+.select.fade .menuSelect{
+  visibility: visible;
+}
+
+.selectHome,.selectAbout,.selectSettings,.selectInstructions,.selectStats{
+  width: 95%;
+  border: 3px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 6px;
+  font-size: 22px;
+  cursor: pointer;
+  color: rgb(221, 221, 221);
+  text-align: center;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(206, 206, 206);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+/*Mute Button on main page*/
+
+#audioMUMBtn {
+  margin: 10px 10px;
+  max-width: 50px;
+  max-height: 50px;
+
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+/*Media Optimisation*/
+
+@media (max-width:1400px) {
+
+  .menuSelect{
+    z-index: 2;
+  }
+
+  .instruction-container{
+    max-height: 500px;
+    overflow: auto;
+  }
+
+}
+
+@media (max-width: 700px) {
+  #title {
+    max-width: 90%;
+    font-size: 28px;
+    max-height: 80%;
+    top: 100px;
+  }
+
+  .container {
+    width: 700px;
+    max-width: 80%;
+    overflow: auto;
+    padding: 20px;
+    
+  }
+  
+  .content {
+    font-size: 18px;
+    padding: 18px;
+    overflow: hidden;
+  }
+
+  .btn {
+    font-size: 18px;
+    bottom: 4px;
+    margin: 4px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #title {
+    max-width: 90%;
+    max-height: 80%;
+    font-size: 24px;
+    top: 110px;
+  }
+
+  .container {
+    width: 700px;
+    max-width: 80%;
+
+    padding: 20px;
+    
+  }
+  
+  .content {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .btn {
+    font-size: 16px;
+    bottom: 2px;
+    
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="MainStylesheet.css" rel="stylesheet">
+
+        <title>Settings Page</title>
+    </head>
+    <body>
+
+        <div>
+            <audio id="audio" loop="true">
+                <source src="Music/Griphop.mp3" type="audio/mp3">
+            </audio>
+            <img alt="" src="Images/volume-mute-solid.svg" 
+            id="audioMUMBtn" onclick="playMusic()" ></img>
+        </div>
+
+
+        <div class="menu">
+            <div class="burger"></div>
+        </div>
+    
+        <div class="select">
+            <div class="menuSelect">
+                <div class="col">
+                    <b>
+                        <div class="selectHome"><a href="MainPage.html">Home</a></div>
+                        <div class="selectAbout"><a href="AboutPage.html">About</a></div>
+                        <div class="selectSettings"><a href="SettingsPage.html">Settings</a></div>
+                        <div class="selectInstructions"><a href="Instructions.html">Instructions</a></div>
+                    </b>
+                </div>  
+            </div>
+        </div>
+
+        <div id="title" class="title">
+            <u><b>Settings</b></u>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <b><u><label for="difficulty">Choose a difficulty:</label></u>
+                    <select id="difficulty" class="selectionBox">
+                        <option value="1">Easy</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Hard</option>
+                    </select>
+                    <br><br><br>
+
+
+                    <u>Audio On/Off</u><br/><br/>
+                    Sounds <input type="checkbox" id="soundCheckbox" name="soundOn" value="soundOn" checked>
+                    <br><br>
+
+                </b>
+            </div>
+
+
+
+            <div id = "save-button" class="buttons">
+                <audio id="typewriter" src="Music/typewriter.mp3"></audio>
+                <button class="btn" onclick="setTypewriter(),setDifficulty(),playType()">Save Settings</button>
+            </div>
+        </div>
+        
+        <script src="mainPageJavaScript.js"></script>
+        
+    </body>
+</html>
